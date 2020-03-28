@@ -53,28 +53,37 @@ public class Machine {
 					
 				}
 				
-				
-				
-				
-				
-				
+			
 			}else if (cabeza == '1') {
 				counter++;
 				
 				if(counter % 2 == 0) {
 					temp.setNextTape(c1);
 					temp.setBeforeTape(c1.getBeforeTape());
-					//c1.setBeforeTape(temp);
+					c1.getBeforeTape().setNextTape(temp);
+					c1.setBeforeTape(temp);
 					c1 = temp;
 					
 				} else {
 					temp.setBeforeTape(c1);
 					temp.setNextTape(c1.getNextTape());
+					c1.getBeforeTape().setNextTape(temp);
+					c1.setBeforeTape(temp);
 					c1 = temp;
 				}
 				
 				
 			}else {
+				counter++;
+				temp.setBeforeTape(c2);
+				c2.setNextTape(temp);
+				
+				if(counter % 2 == 0) {
+					c1 = c1.getBeforeTape();
+				}
+				
+				
+				
 					
 			}
 		}
