@@ -64,7 +64,7 @@ public class Machine {
 				if(counter % 2 == 0) {
 					temp.setNextTape(c1);
 					temp.setBeforeTape(c1.getBeforeTape());
-					//c1.setBeforeTape(temp);
+					c1.setBeforeTape(temp);
 					c1 = temp;
 					
 				} else {
