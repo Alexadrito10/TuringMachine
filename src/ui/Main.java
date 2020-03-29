@@ -26,23 +26,23 @@ public class Main {
 				char head = line.charAt(i);
 				i++;
 				char option=line.charAt(i);
-				//System.out.println("cabeza: "+head +" y accion: "+ option  );
+			
 				
 				switch(option) {
 				
 				case '0':
-					//System.out.println("Entrando a leer");
+					
 					bw.write(mac.readElement(head)+"\n");
-					//System.out.println("Salí");
+					
 					
 					break;
 				case '1':
 					i++;
 					char key = line.charAt(i);
-					//System.out.println("la letrica :"+ key);
+					
 				
 					mac.addElement(head, key);
-					//System.out.println("Pasé");
+					
 					
 					break;
 				case '2':
